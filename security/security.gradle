@@ -7,6 +7,7 @@ dependencies {
     implementation 'io.jmix.flowui:jmix-flowui-themes'
     implementation 'io.jmix.security:jmix-security-starter'
     implementation 'io.jmix.security:jmix-security-flowui-starter'
+    implementation 'io.jmix.flowui:jmix-flowui-data'
 
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
@@ -14,7 +15,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-web'
 
     testRuntimeOnly 'org.hsqldb:hsqldb'
-    implementation 'dev.qubik:core:0.1.11'
+    implementation 'dev.qubik:core:0.1.21'
 }
 
 configurations.implementation {
