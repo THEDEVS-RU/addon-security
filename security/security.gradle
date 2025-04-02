@@ -14,7 +14,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-web'
 
     testRuntimeOnly 'org.hsqldb:hsqldb'
-    implementation 'ru.thedevs:core:0.0.1'
+    implementation 'ru.thedevs:core:0.0.2'
 }
 
 configurations.implementation {
