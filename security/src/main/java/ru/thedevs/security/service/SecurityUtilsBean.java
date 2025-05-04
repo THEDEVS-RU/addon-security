@@ -1,18 +1,13 @@
 package ru.thedevs.security.service;
 
-import ru.thedevs.entity.BaseUser;
 import ru.thedevs.entity.Phone;
-import io.jmix.core.FetchPlan;
 import io.jmix.core.UnconstrainedDataManager;
-import io.jmix.security.role.assignment.RoleAssignmentRoleType;
-import io.jmix.securitydata.entity.RoleAssignmentEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
 
 @Component
-public class SecurityUtilsBean implements ISecurityUtilsBean {
+public class SecurityUtilsBean {
   @Autowired
   private UnconstrainedDataManager dataManager;
 
@@ -35,27 +30,10 @@ public class SecurityUtilsBean implements ISecurityUtilsBean {
     return phone;
   }
 
-  public RoleAssignmentEntity createRoleAssignment(BaseUser baseUser, String roleCode) {
-    RoleAssignmentEntity roleAssignmentEntity = dataManager.create(RoleAssignmentEntity.class);
-    roleAssignmentEntity.setRoleCode(roleCode);
-    roleAssignmentEntity.setUsername(baseUser.getUsername());
-    roleAssignmentEntity.setRoleType(RoleAssignmentRoleType.RESOURCE);
-    return roleAssignmentEntity;
-  }
-
   private Phone searchPhoneExist(Long phoneLong, String fetchName) {
     return dataManager.load(Phone.class).query("e.number = :curNumber")
          .parameter("curNumber", phoneLong)
          .fetchPlan(fetchName)
          .optional().orElse(null);
-  }
-
-  public List<RoleAssignmentEntity> getRoles(String user) {
-    return dataManager.load(RoleAssignmentEntity.class)
-         .query("e.username = :username")
-         .parameter("username", user)
-         .joinTransaction(false)
-         .fetchPlan(FetchPlan.BASE)
-         .list();
   }
 }
