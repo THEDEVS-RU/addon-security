@@ -6,7 +6,7 @@ import io.jmix.security.role.annotation.EntityAttributePolicy;
 import io.jmix.security.role.annotation.EntityPolicy;
 import io.jmix.security.role.annotation.ResourceRole;
 import io.jmix.securityflowui.role.annotation.ViewPolicy;
-import ru.thedevs.entity.Token;
+import ru.thedevs.entities.Token;
 
 @ResourceRole(name = "Токены:чтение", code = TokensRoleRead.CODE)
 public interface TokensRoleRead {

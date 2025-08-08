@@ -1,6 +1,6 @@
 package ru.thedevs.security.token;
 
-import ru.thedevs.entity.Token;
+import ru.thedevs.entities.Token;
 import io.jmix.security.model.EntityAttributePolicyAction;
 import io.jmix.security.model.EntityPolicyAction;
 import io.jmix.security.role.annotation.EntityAttributePolicy;

@@ -1,6 +1,6 @@
 package ru.thedevs.security.service;
 
-import ru.thedevs.entity.Phone;
+import ru.thedevs.entities.Phone;
 import io.jmix.core.UnconstrainedDataManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

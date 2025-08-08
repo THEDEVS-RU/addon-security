@@ -1,6 +1,6 @@
 package ru.thedevs.security.baseuser;
 
-import ru.thedevs.entity.BaseUser;
+import ru.thedevs.entities.BaseUser;
 import io.jmix.security.model.EntityPolicyAction;
 import io.jmix.security.role.annotation.EntityPolicy;
 import io.jmix.security.role.annotation.ResourceRole;

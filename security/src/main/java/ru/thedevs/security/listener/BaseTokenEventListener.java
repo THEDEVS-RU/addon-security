@@ -1,6 +1,6 @@
 package ru.thedevs.security.listener;
 
-import ru.thedevs.entity.Token;
+import ru.thedevs.entities.Token;
 import ru.thedevs.security.service.IEncryptionService;
 import io.jmix.core.event.EntityLoadingEvent;
 import io.jmix.core.event.EntitySavingEvent;
